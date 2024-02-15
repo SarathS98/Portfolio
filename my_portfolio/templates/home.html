@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    {% load static %}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'cssfiles/style.css' %}">
+    
+</head>
+<body class="bod">
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">PORTFOLIO.</div>
+            <ul>
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#port">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="hmecntnt">
+            <h3>Hello, it's me</h3>
+            <h1>SARATH S,</h1>
+            <h2>and I'm an ENGINEER.</h2>
+            <div class="social">
+                <a href="https://github.com/SarathS98"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/sarathsajikp"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="https://www.instagram.com/sarath_kunnummel/"><i class='bx bxl-instagram' ></i></a>
+                    
+            </div>
+            <a href="{% static 'resume.pdf' %}" download class="btn">Download Resume</a>
+        </div>
+        <div class="homeimage1">
+            <img src="{% static 'images/pprofpic.png'%}" alt="" class="homeimage">
+        </div>
+        <span class="home-imgHover"></span>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="{% static 'images/pprofpic.png'%}" alt="" class="homeimage">
+        </div>
+        <div class="hmecntnt1">
+            <center><h3 class="about1">ABOUT ME</h3></center>
+            <h1 class="cntnt"><p>Hello there! I am a recent Mechanical Engineering graduate with a passion for technology. During my academic journey, I discovered my enthusiasm for coding and took a proactive step towards gaining practical experience in the field.</p><p>I completed a six-month internship at One Team Solutions in Kochi, where I delved into the world of full-stack web development. In this immersive experience, I honed my skills in HTML, CSS, Bootstrap, JavaScript, and Django, building a solid foundation in both front-end and back-end development. I actively contributed to the development of dynamic and user-friendly websites, applying my problem-solving skills to create seamless and efficient solutions.</p><p>As I transition from mechanical engineering to pursue a career in full-stack web development, I am excited about leveraging my diverse skills to create innovative and impactful digital solutions. I am eager to bring my unique perspective, adaptability, and passion for learning to a dynamic team, contributing to the success of projects and embracing the continuous evolution of the tech industry.</p></h1>
+        </div>
+    </section>
+    <section class="port" id="port">
+        <div class="portfolio" id="project">
+            <div class="main-text" id="project">
+                <h2 class="latest">PORTFOLIO</h2>
+                <div class="portfolio-content">
+                    <div class="row">
+                        <img src="{% static 'images/bitbliss.jpg'%}">
+                        <div class="layer">
+                            <h5>BITEBLISS</h5>
+                            <p>A platform where users can share, explore, and discover diverse recipes from around the world.</P>
+                                <P>Backend : Python, Django, MySQL
+                                Frontend : HTML, CSS </p>
+                                <a href="#" class="btn">Know More</a>
+                                <!-- <a href="#"><i class="bx bx-link-external" style="color: black;"></i> </a> -->
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="{% static 'images/Screenshot 2024-01-30 212427.png'%}">
+                        <div class="layer">
+                            <h5>FEE MANAGEMENT SYSTEM</h5>
+                            <p>The objective of this system is to makes the less paper work. And make the account department more reliable</p>
+                            <p>Backend : Python, Django, MySQL</p>
+                                <a href="#" class="btn">Know More</a>
+                                <!-- <a href="#"><i class="bx bx-link-external" style="color: black;"></i> </a> -->
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2 >CONTACT ME</h2>
+                <div class="contact-list">
+                    <li><i class='bx bx-send'></i>sarathsaji998@gmail.com</li>
+                    <li><i class='bx bxs-phone'></i>9497797222</li>
+                </div>
+        
+                <div class="social1">
+                    <a href="https://www.instagram.com/sarath_kunnummel/"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://www.linkedin.com/in/sarathsajikp"><i class='bx bxl-linkedin-square' ></i></a>
+                    <a href="https://github.com/SarathS98"><i class='bx bxl-github'></i></a>
+                    
+                    
+                </div>        
+        </div>
+        <div class="contact-form">
+            <form method="POST" action=".">
+                {% csrf_token %}
+                <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                <input type="text" name="subject" id="subject" placeholder="Enter Your Subject">
+                <textarea name="message" cols="40" rows="10" id="msg" placeholder="Enter Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="send">
+            </form>
+            
+        </div>
+        
+    </section>
+    <a href="#home" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+
+    <script src="{% static 'home.js' %}"></script>
+</body>
+</html>

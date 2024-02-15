@@ -1,0 +1,453 @@
+
+*{
+    box-sizing:  border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body{
+    margin: 0%;
+    background-color: rgba(204, 204, 204, 0.26);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.51);
+    width: 100%;
+    margin: auto;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: rgb(247, 247, 247);
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 100px;
+    font-size: 56px;
+    font-family: Impact, fantasy;
+    text-align: center;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1 ;
+    }
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 15px;
+    position: relative;
+    margin-right: 30px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(247, 247, 247);
+    text-transform: uppercase;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color: #f7ff02ee;
+}
+
+.home{
+    display: flex;
+    height:100vh;
+    position: relative;
+    width: 100%;
+    padding: 70px 10% 0;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeimage{
+    width: 550px;
+    height: 550px;
+    align-items: center;
+}
+
+.hmecntnt{
+    max-width: 600px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .2s;
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;}
+}
+
+.hmecntnt h3{
+    margin-top: 27.5px;
+    font-size: 32px;
+    color:#000000b3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hmecntnt h1{
+    margin-top: 15px;
+    font-size: 56px;
+    color: #000000b1;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hmecntnt h2{
+    font-size: 32px;
+    color:#000000b3;
+    margin-top: 15px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.social{
+    margin-top: 60px;
+}
+
+.social a{
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 40%;
+    font-size: 2rem;
+    color: #000000b3;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    transition: 0.1s;
+}
+
+.social a:hover{
+    color: #f7ff02d7;
+    box-shadow: 0 0 1rem;
+}
+
+.btn{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 0.5rem;
+    background: #f7ff029a;
+    box-shadow: 0 0 2rem #0000003a;
+    font-size: 1.6rem;
+    color: #000000b7;
+    font-size: 15px;
+    font-weight: 550;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn:hover{
+    box-shadow: none
+
+}
+
+.social1 a{
+    justify-content: center;
+    align-items: center;
+    width: -10rem;
+    height: 1rem;
+    background: transparent;
+    border-radius: 40%;
+    font-size: 2rem;
+    color: #000000b3;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    transition: 0.1s;
+}
+
+.social1 a:hover{
+    
+    color: #f7ff02d7;
+    box-shadow: 0 0 1rem;
+}
+
+.about{
+    margin-top: -40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: rem;
+}
+
+.about-img img{
+    margin-top: 180px;
+    margin-left: 70px;
+    padding-bottom: 20%;
+    max-width: 800px;
+    height: auto;
+    width: 500px;
+}
+
+.hmecntnt1{
+    margin-top: 0px;
+    max-width: 800px;
+    margin-left: -130px;
+}
+.hmecntnt1 h3{
+    color: #ffffff;
+    background-color: #00000076;
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hmecntnt1 h1{
+    color: #ffffff;
+    background-color: #00000076;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main-text{
+    padding-top: 100px;
+    margin-top: 40px;
+}
+
+.main-text h2{
+    margin-top: 50px;
+    color: #ffffff;
+    background-color: #00000076;
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    width: 700px;
+    margin-left: 70px;
+    
+}
+
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+    margin-top: 30px;
+}
+
+.row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.row img{
+    height: 400px;
+    margin-left: 70px;
+    width: 400px;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    margin-left: 70px;
+    width: 400px;
+    height: 0;
+    background: linear-gradient(#0000003e,#393939);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-size: .8rem;
+    line-height: 1.8;
+}
+
+.row:hover img{
+    transform: scale(1.1);
+}
+
+.row:hover .layer{
+    height: 600px;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 300px;
+    margin-bottom: 30px;
+}
+
+.contact-text h2{
+    margin-top: -280px;
+    color: #ffffff;
+    background-color: #00000076;
+    font-size: 32px;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    margin-left: 50px;
+    width: 700px;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+    
+}
+
+.contact-list li{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display:block;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 100px;
+    color: #000000;
+    
+}
+
+.contact-list i{
+    
+    display: inline-block;
+    color: #00000097;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.social1{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.social1 a{
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 40%;
+    font-size: 2rem;
+    color: #000000b3;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    transition: 0.1s;
+}
+
+.social1 a:hover{
+    color: #f7ff02d7;
+    box-shadow: 0 0 1rem;
+}
+
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form input,form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding:18px;
+    background: #00000027;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 0.5rem;
+    background: #f7ff029a;
+    box-shadow: 0 0 2rem #0000003a;
+    font-size: 1.6rem;
+    color: #000000b7;
+    font-size: 15px;
+    font-weight: 550;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contact-form form .send:hover{
+    box-shadow: none
+}
+
+
+.top{
+    position: fixed;
+    bottom: 3.1rem;
+    right: 1.1rem;
+}
+
+.top i {
+    color: #000000;
+    background: #f7ff029a;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    box-shadow:none
+}
+
+.top i:hover {
+    box-shadow: 0 0 1rem#f2ff00;
+}
+
